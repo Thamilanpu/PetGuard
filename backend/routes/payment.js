@@ -27,6 +27,7 @@ router.post("/payment", (req, res) => {
         res.status(500).json({ error: "An error occurred while creating customer." });
     });
 });
+
 // GET endpoint for retrieving all payments
 router.get("/payments", (req, res) => {
     stripe.charges.list(

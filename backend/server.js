@@ -13,7 +13,7 @@ const serviceRoutes = require('./routes/serviceRoutes');
 const payment = require('./routes/payment')
 
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: ['http://localhost:3000',`https://pet-guard-tau.vercel.app/`],
   credentials: true,
 };
 
