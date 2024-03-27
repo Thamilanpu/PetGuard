@@ -46,7 +46,7 @@ const BookingList = () => {
 
   const updateBooking = async (formData) => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}api/bookings/${editingBooking._id}`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/bookings/${editingBooking._id}`, {
         method: 'PUT',
         credentials: 'include',
         headers: {
