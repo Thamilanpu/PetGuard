@@ -12,7 +12,7 @@ const BookingList = () => {
 
   const fetchBookings = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/bookings', { credentials: 'include' });
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/bookings`, { credentials: 'include' });
       if (!response.ok) {
         throw new Error('Failed to fetch bookings');
       }
@@ -25,7 +25,7 @@ const BookingList = () => {
 
   const createBooking = async (formData) => {
     try {
-      const response = await fetch('http://localhost:5000/api/bookings', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/bookings`, {
         method: 'POST',
         credentials: 'include',
         headers: {

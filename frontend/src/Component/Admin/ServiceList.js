@@ -12,7 +12,7 @@ const ServiceList = () => {
 
   const fetchServices = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/services', { credentials: 'include' });
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/services`, { credentials: 'include' });
       if (!response.ok) {
         throw new Error('Failed to fetch services');
       }
@@ -25,7 +25,7 @@ const ServiceList = () => {
 
   const createService = async (formData) => {
     try {
-      const response = await fetch('http://localhost:5000/api/services', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}api/services`, {
         method: 'POST',
         credentials: 'include',
         headers: {
